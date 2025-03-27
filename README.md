@@ -2,17 +2,15 @@
 
 ### Overview
 
-- Intro
-- Figma
-- Images
+Project 3 is to showcase the usage of website designing tool to create the appropriate page base on giving dimension value instead of step by step instruction as previous projects. Project is to build the page that can display different size of screen.
+
+![1440px](https://practicum-content.s3.us-west-1.amazonaws.com/resources/01_1716205590.png)
+![880-1440px](https://practicum-content.s3.us-west-1.amazonaws.com/resources/02_1716205592.png)
+![320px](https://practicum-content.s3.us-west-1.amazonaws.com/resources/03_1716205592.png)
 
 **Intro**
 
-Project to create a photography portfolio presentation website that adapt to different screen size, website created using the layout provided from Figma instruction.
-
-**Figma**
-
-- [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
+This project website is a photography sharing social media that adapt to different screen size, website created using the layout provided from Figma instruction.
 
 **Images**
 
