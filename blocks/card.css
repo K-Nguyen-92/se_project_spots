@@ -50,14 +50,11 @@
   .card__title {
     font-size: 16px;
     max-width: 200px;
+    line-height: 1;
   }
 
   .card__image {
     height: 288px;
-  }
-
-  .card__content {
-    padding-top: 12px;
   }
 
   .card__like-button {

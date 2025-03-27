@@ -16,6 +16,10 @@ This project website is a photography sharing social media that adapt to differe
 
 Images were provided and size appropriately with screen size requirement. Images were use as showcase of website display purpose only.
 
+**Project Link**
+
+- [Project Preview](https://k-nguyen-92.github.io/se_project_spots/)
+
 **Video**
 
 - [Link to the project video](https://drive.google.com/file/d/1spj-a3GgSR00RNt2zW-wLHnglGdZroJV/view?usp=sharing)
