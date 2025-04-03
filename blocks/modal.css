@@ -26,6 +26,12 @@
   height: 40px;
   border: none;
   background-color: transparent;
+  opacity: 0.4;
+}
+
+.modal__close-button:hover {
+  cursor: url("../icon/pointer.svg"), pointer;
+  opacity: 1;
 }
 
 .modal__container {
@@ -66,6 +72,12 @@
   border-color: rgba(33, 33, 33, 0.4);
 }
 
+.modal__input:hover {
+  cursor: url("../icon/pointer.svg"), pointer;
+  opacity: 1;
+  border-color: rgba(33, 33, 33, 1);
+}
+
 .modal__save-button {
   width: 156px;
   padding: 18px 0;
@@ -73,6 +85,11 @@
   border-radius: 8px;
   border: none;
   color: rgba(252, 245, 229, 1);
+}
+
+.modal__save-button:hover {
+  background-color: rgba(33, 33, 33, 0.8);
+  cursor: url("../icon/pointer.svg"), pointer;
 }
 
 @media screen and (max-width: 630px) {
