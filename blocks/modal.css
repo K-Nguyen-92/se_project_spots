@@ -13,7 +13,7 @@
   padding: 0 16px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -94,12 +94,12 @@
   cursor: url("../icon/pointer.svg"), pointer;
 }
 
-.modal__content_preview {
+.modal__preview-content {
   padding: 0;
   background-color: transparent;
   position: relative;
 }
-.modal__image_preview {
+.modal__image {
   border-radius: 8px;
   max-width: 80vw;
   max-height: 80vh;
@@ -114,7 +114,7 @@
   border: 2px none rgba(255, 255, 255, 1);
 }
 
-.modal__caption_preview {
+.modal__caption {
   background-color: rgba(33, 33, 33, 1);
   padding: 4px 8px;
   border-radius: 8px;
