@@ -12,6 +12,10 @@
   border: none;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__title {
   margin: 0;
   font-size: 20px;

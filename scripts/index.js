@@ -45,14 +45,16 @@ const previewModal = document.querySelector("#preview-modal");
 const previewModalImage = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 const closeButtons = document.querySelectorAll(".modal__close-button");
-const modalClose = document.querySelectorAll(".modal");
+const modals = document.querySelectorAll(".modal");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function handleEditFormSubmit(e) {
@@ -105,6 +107,10 @@ profileEditButton.addEventListener("click", () => {
   openModal(editModal);
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(editFormSubmit, [
+    editModalNameInput,
+    editModalDescriptionInput,
+  ]);
 });
 
 editFormSubmit.addEventListener("submit", handleEditFormSubmit);
@@ -123,20 +129,26 @@ closeButtons.forEach((button) => {
   button.addEventListener("click", () => closeModal(popupModal));
 });
 
-modalClose.forEach((button) => {
+modals.forEach((button) => {
   const popupModal = button.closest(".modal");
   button.addEventListener("click", (e) => {
     if (e.target === popupModal) {
       closeModal(popupModal);
     }
   });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" || e.key === "Esc") {
-      closeModal(popupModal);
-    }
-  });
+  // document.addEventListener("keydown", (e) => {
+  //   if (e.key === "Escape" || e.key === "Esc") {
+  //     closeModal(popupModal);
+  //   }
+  // });
 });
 
+function handleEscape(e) {
+  if (e.key === "Escape") {
+    const openedModal = document.querySelector(".modal_opened");
+    closeModal(openedModal);
+  }
+}
 // OUTDATED CODE --- ARCHIVE
 // const editCloseButton = editModal.querySelector(".modal__close-button");
 // const newPostCloseButton = newPostModal.querySelector(".modal__close-button");

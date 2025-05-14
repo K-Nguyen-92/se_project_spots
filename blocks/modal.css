@@ -103,6 +103,7 @@
 
 .modal__save-button_inactive {
   opacity: 0.5;
+  pointer-events: none;
 }
 
 .modal__preview-content {
