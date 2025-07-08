@@ -1,7 +1,7 @@
-export const settings = {
-  formSelector: "modal__form",
-  inputSelector: "modal__input",
-  submitButtonSelector: "modal__save-button",
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__save-button",
   inactiveButtonClass: "modal__save-button_inactive",
   inputErrorClass: "modal__input_error",
   errorClass: "modal__error_visible",
@@ -49,7 +49,7 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
   }
 };
 
-export const disableButton = (buttonElement, settings) => {
+const disableButton = (buttonElement, settings) => {
   buttonElement.classList.add(settings.inactiveButtonClass);
 };
 
@@ -75,9 +75,11 @@ const setEventListeners = (formElement, settings) => {
   });
 };
 
-export const enableValidation = (settings) => {
+const enableValidation = (settings) => {
   const formList = document.querySelectorAll(settings.formSelector);
   formList.forEach((formElement) => {
     setEventListeners(formElement, settings);
   });
 };
+
+enableValidation(settings);
