@@ -1,4 +1,8 @@
-import { enableValidation, settings } from "../scripts/validation.js";
+import {
+  enableValidation,
+  settings,
+  disableButton,
+} from "../scripts/validation.js";
 import "./index.css";
 import Api from "../utils/Api.js";
 import { setButtonText } from "../utils/helpers.js";
@@ -85,7 +89,6 @@ function handleEditFormSubmit(e) {
 function handleNewPostSubmit(e) {
   e.preventDefault();
   setButtonText(e.submitter, true);
-  console.log(e.submitter.textContent);
   api
     .createCard({
       name: newPostCaptionInput.value,
