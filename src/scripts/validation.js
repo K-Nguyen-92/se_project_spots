@@ -1,10 +1,10 @@
 export const settings = {
-  formSelector: "modal__form",
-  inputSelector: "modal__input",
-  submitButtonSelector: "modal__save-button",
-  inactiveButtonClass: "modal__save-button_inactive",
-  inputErrorClass: "modal__input_error",
-  errorClass: "modal__error_visible",
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__save-button",
+  inactiveButtonClass: ".modal__save-button_inactive",
+  inputErrorClass: ".modal__input_error",
+  errorClass: ".modal__error_visible",
 };
 
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
@@ -51,9 +51,10 @@ const toggleButtonState = (inputList, buttonElement, settings) => {
 
 export const disableButton = (buttonElement, settings) => {
   buttonElement.classList.add(settings.inactiveButtonClass);
+  buttonElement.disabled = true;
 };
 
-const resetValidation = (formElement, inputList, settings) => {
+export const resetValidation = (formElement, inputList, settings) => {
   inputList.forEach((input) => {
     hideInputError(formElement, input, settings);
   });

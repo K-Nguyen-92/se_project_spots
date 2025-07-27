@@ -2,6 +2,7 @@ import {
   enableValidation,
   settings,
   disableButton,
+  resetValidation,
 } from "../scripts/validation.js";
 import "./index.css";
 import Api from "../utils/Api.js";
@@ -35,6 +36,7 @@ const avatarLinkInput = avatarModal.querySelector("#avatar-link-input");
 const profileAvatar = document.querySelector(".profile__avatar");
 const deleteModal = document.querySelector("#delete-modal");
 const deleteForm = deleteModal.querySelector(".modal__form");
+const cancelButton = document.querySelector(".modal__cancel-button");
 let selectedCard, selectedCardId;
 const api = new Api({
   baseUrl: "https://around-api.en.tripleten-services.com/v1",
@@ -114,12 +116,12 @@ function handleAvatarSubmit(e) {
     .editUserAvatar(avatarLinkInput.value)
     .then((data) => {
       profileAvatar.src = data.avatar;
+      closeModal(avatarModal);
     })
     .catch(console.error)
     .finally(() => {
       setButtonText(e.submitter, false);
     });
-  closeModal(avatarModal);
 }
 
 function handleDeleteCard(cardElement, cardId) {
@@ -206,6 +208,8 @@ avatarSubmit.addEventListener("submit", handleAvatarSubmit);
 
 deleteForm.addEventListener("submit", handleDeleteSubmit);
 
+cancelButton.addEventListener("click", () => closeModal(deleteModal));
+
 closeButtons.forEach((button) => {
   const popupModal = button.closest(".modal");
   button.addEventListener("click", () => closeModal(popupModal));
@@ -226,4 +230,6 @@ function handleEscape(e) {
     closeModal(openedModal);
   }
 }
-enableValidation(settings);
+document.addEventListener("DOMContentLoaded", () => {
+  enableValidation(settings);
+});
