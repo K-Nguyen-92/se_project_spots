@@ -2,9 +2,9 @@ export const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__save-button",
-  inactiveButtonClass: ".modal__save-button_inactive",
-  inputErrorClass: ".modal__input_error",
-  errorClass: ".modal__error_visible",
+  inactiveButtonClass: "modal__save-button_inactive",
+  inputErrorClass: "modal__input_error",
+  errorClass: "modal__error_visible",
 };
 
 const showInputError = (formElement, inputElement, errorMessage, settings) => {
@@ -67,6 +67,7 @@ const setEventListeners = (formElement, settings) => {
   const buttonElement = formElement.querySelector(
     settings.submitButtonSelector
   );
+  if (!buttonElement) return;
   toggleButtonState(inputList, buttonElement, settings);
   inputList.forEach((inputElement) => {
     inputElement.addEventListener("input", function () {
