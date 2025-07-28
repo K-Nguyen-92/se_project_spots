@@ -34,7 +34,8 @@
 
 .profile__avatar-container:hover .profile__avatar-button {
   visibility: visible;
-  cursor: url("../icon/pointer.svg"), pointer;
+  /* cursor: url("../icon/pointer.svg"), pointer; */
+  cursor: pointer;
 }
 
 .profile__avatar-button::after {
@@ -95,7 +96,8 @@
 }
 
 .profile__edit:hover {
-  cursor: url("../icon/pointer.svg"), pointer;
+  /* cursor: url("../icon/pointer.svg"), pointer; */
+  cursor: pointer;
   opacity: 1;
 }
 
@@ -119,7 +121,8 @@
 
 .profile__new-post:hover {
   background-color: rgba(33, 33, 33, 0.8);
-  cursor: url("../icon/pointer.svg"), pointer;
+  /* cursor: url("../icon/pointer.svg"), pointer; */
+  cursor: pointer;
 }
 
 .profile__new-post-icon {
@@ -143,7 +146,9 @@
   .profile__avatar-button::after {
     content: "";
   }
-
+  .profile__avatar-container {
+    max-height: 100px;
+  }
   .profile__avatar-button {
     visibility: visible;
     background-color: (33, 33, 33, 0.6);
